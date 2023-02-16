@@ -1,0 +1,42 @@
+:root {
+  --primaryColor: white;
+  --secundaryColor: violet;
+  --activeColor: red;
+}
+
+/* Using Class in :root Element */
+:root.darkTheme {
+  --primaryColor: black;
+  --secundaryColor: yellow;
+  --activeColor: orange;
+}
+body {
+  background-color: var(--primaryColor, blue); /*fallback blue*/
+}
+
+.App {
+  background-color: var(--activeColor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+h1 {
+  background-color: var(--secundaryColor);
+}
+h2 {
+  background-color: var(--activeColor);
+}
+
+/* Using Atribute in :root Element */
+:root[dataTheme="light"] {
+  --primaryColor: white;
+  --secundaryColor: violet;
+  --activeColor: red;
+}
+:root[dataTheme="dark"] {
+  --primaryColor: black;
+  --secundaryColor: yellow;
+  --activeColor: orange;
+  filter: invert(1) brightness(0.6); /*blur(5px)*/
+}
