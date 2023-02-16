@@ -28,6 +28,11 @@ h2 {
   background-color: var(--activeColor);
 }
 
+button {
+  padding: 20px;
+  margin: 5px;
+}
+
 /* Using Atribute in :root Element */
 :root[dataTheme="light"] {
   --primaryColor: white;

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./styles.css";
 
 // document.documentElement returns the Element that is the root
@@ -31,8 +31,6 @@ export default function App() {
     //document.documentElement.removeAttribute("dataTheme")
     console.log(document.documentElement.nodeName);
   };
-
-  const handleClick = () => {};
 
   // CHECK VARIABLES IN CSS
   // GET AND SET VARIABLE FROM INLINE STYLE
@@ -73,7 +71,6 @@ export default function App() {
       <button onClick={handleClickAttribute}>
         CHANGE THEME WITH ATTRIBUTE IN :root Element
       </button>
-      <button onClick={handleClick}>CHANGE THEME WITH ...</button>
 
       <label>
         Choose color theme:
